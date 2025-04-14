@@ -9,9 +9,171 @@
     <title>Vacancies</title>
   </head>
   <body>
-    <header>
-      <h1>List of vacancies</h1>
-    </header>
+    <div class="wrapper">
+      <section class="vacancies">
+        <h1 class="vacancies__title">List of vacancies</h1>
+        <form class="form vacancies__form">
+          <div class="form-select">
+            <label class="form__label">Form</label>
+            <select name="form" class="form__select">
+              <option disabled selected>Not selected</option>
+              <option>Full time</option>
+              <option>Half time</option>
+              <option>Part time</option>
+            </select>
+          </div>
+          <div class="form-select">
+            <label class="form__label">Position</label>
+            <select name="position" class="vacancies__select">
+              <option disabled selected>Not selected</option>
+              <option>Frontend</option>
+              <option>Backend</option>
+              <option>QA</option>
+            </select>
+          </div>
+          
+          <button class="form__search-btn" type="submit">Search</button>
+        </form>
+
+        <ul class="vacancies__list">
+          <li class="vacancies__item">
+            <article class="vacancies-card">
+              <header class="vacancies-card__header">
+                <h3 class="vacancies-card__title">.Net Software Developer (GIS experience)</h3>
+                <img class="vacancies-card__logo" src="../img/Group.svg" alt="SoloProtect logo"/>
+              
+                <button class="vacancies-card__respond">Respond</button>
+              </header>
+                <ul class="vacancies-card__info">
+                  <li>Form: Full time</li>
+                  <li>Company SoloProtect</li>
+                  <li>Web https://www.soloprotect.com/uk</li>
+                  <li>Address United Kingdom</li>
+                </ul>
+              <p class="vacancies-card__desc">
+                We are looking for an experienced and talented Software Developer to develop, test, document, and implement solutions for SoloProtect clients and devices.
+                The ideal candidate will be self-motivated, have experience working in agile teams, and excellent communication skills
+              </p>
+              <details class="vacancies-card__accordion">
+                <summary class="vacancies-card__toggle">More details</summary>
+                <div>
+                  <p class="vacancies-card__snapshot-title">Success Snapshot</p>
+                    <ul class="vacancies-card__list">
+                      <li class="vacancies-card__item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
+                      <li>Work closely with a Team Lead and a UI team to deliver stable, efficient, and scalable solutions;</li>
+                      <li>Be proud of stable, reliable, and secure code.</li>
+                    </ul>
+                </div>
+              </details>
+            </article>
+          </li>
+
+          <li class="vacancies__item">
+            <article class="vacancies-card">
+              <header class="vacancies-card__header">
+                <h3 class="vacancies-card__title">A.I. Sports Startup seeks talented iOS engineer</h3>
+                <img class="vacancies-card__logo" src="../img/phantasmaLabs.svg" alt="SoloProtect logo"/>
+              
+                <button class="vacancies-card__respond">Respond</button>
+              </header>
+                <ul class="vacancies-card__info">
+                  <li>Form: Half time</li>
+                  <li>Company Phantasma Labs</li>
+                  <li>Web https://phantasma.global/</li>
+                  <li>Address United Kingdom</li>
+                </ul>
+              <p class="vacancies-card__desc">
+                We are looking for an experienced and talented Software Developer to develop, test, document, and implement solutions for SoloProtect clients and devices.
+                The ideal candidate will be self-motivated, have experience working in agile teams, and excellent communication skills
+              </p>
+              <details class="vacancies-card__accordion">
+                <summary class="vacancies-card__toggle">More details</summary>
+                <div>
+                  <p class="vacancies-card__snapshot-title">Success Snapshot</p>
+                    <ul class="vacancies-card__list">
+                      <li class="vacancies-card__item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
+                      <li>Work closely with a Team Lead and a UI team to deliver stable, efficient, and scalable solutions;</li>
+                      <li>Be proud of stable, reliable, and secure code.</li>
+                    </ul>
+                </div>
+              </details>
+            </article>
+          </li>
+
+          <li class="vacancies__item">
+            <article class="vacancies-card">
+              <header class="vacancies-card__header">
+                <h3 class="vacancies-card__title">Senior Backend Developer</h3>
+                <img class="vacancies-card__logo" src="../img/lawpilots.svg" alt="lawpilots logo"/>
+              
+                <button class="vacancies-card__respond">Respond</button>
+              </header>
+                <ul class="vacancies-card__info">
+                  <li>Form: Part time</li>
+                  <li>Company LawPilots</li>
+                  <li>Web https://www.lawpilots.com/de-de/</li>
+                  <li>Address Berlin</li>
+                </ul>
+              <p class="vacancies-card__desc">
+                We are looking for an experienced and talented Software Developer to develop, test, document, and implement solutions for SoloProtect clients and devices.
+                The ideal candidate will be self-motivated, have experience working in agile teams, and excellent communication skills
+              </p>
+              <details class="vacancies-card__accordion">
+                <summary class="vacancies-card__toggle">More details</summary>
+                <div>
+                  <p class="vacancies-card__snapshot-title">Success Snapshot</p>
+                    <ul class="vacancies-card__list">
+                      <li class="vacancies-card__item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
+                      <li>Work closely with a Team Lead and a UI team to deliver stable, efficient, and scalable solutions;</li>
+                      <li>Be proud of stable, reliable, and secure code.</li>
+                    </ul>
+                </div>
+              </details>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <section class="request">
+        <div class="request__container">
+          <h2 class="request__title">Leave a request</h2>
+          <p class="request__subtitle">We will advise you and help you start a new project</p>
+          <form class="request__form form">
+            <div class="form__field">
+              <label class="form__label">Your name</label>
+              <input placeholder="Please introduce yourself" class="form__input" required>
+            </div>
+            <div class="form__field">
+              <label class="form__label">Email</label>
+              <input placeholder="vanov@gmail.com" type="email" class="form__input" required>
+            </div>
+            <div class="form__field">
+              <label class="form__label">Phone number</label>
+              <input placeholder="+7 (999) 000 00 00" class="form__input" required>
+            </div>
+            <div class="form__field">
+              <label class="form__label">Comment</label>
+              <textarea placeholder="Message text" class="form__textarea">Message text</textarea>
+            </div>
+            <button class="form__submit button" type="submit">Send</button>
+            <p class="form__consent">By clicking "Send" you confirm your consent to the processing of personal data</p>
+          </form>
+        </div>
+      </section>
+
+      <footer class="contacts">
+        <div class="contacts__item">
+          <span class="contacts__phone">+7 499 391-66-69</span>
+        </div>
+        <div class="contacts__item">
+          <a class="contacts__link" href="mailto:mail@greensight.ru">mail@greensight.ru</a>
+        </div>
+        <div class="contacts__item">
+          <span class="contacts__address">322A, 2nd Floor, Zelenograd, Moscow, Russia</span>
+        </div>
+       <a href="#" class="contacts__link">Directions</a>
+      </footer>
+    </div>
   </body>
 </html>
 

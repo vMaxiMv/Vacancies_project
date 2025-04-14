@@ -1,7 +1,3 @@
 @use 'global/fonts';
-
-body {
-    
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-}
+@use 'global/base';
+@use 'pages/VacanciesList';

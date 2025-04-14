@@ -1,12 +1,10 @@
 const gulp = require('gulp')
 const gutil = require('gulp-util');
-const del = require('del')
 const sourcemaps = require('gulp-sourcemaps')
 const autoprefixer = require('gulp-autoprefixer').default;
 const sass = require('gulp-sass')(require('sass'));
 const sync = require('browser-sync').create()
 const {deleteAsync} = require('del')
-console.log('autoprefixer:', autoprefixer);
 
 const path = {
   build: {
@@ -25,7 +23,7 @@ const path = {
   },
   watch: {
     html: 'src/*.*',
-    css: 'src/styles/*.scss',
+    css: 'src/styles/**/*.scss',
     js: 'src/js/**/*.js',
     img: 'src/img/**/*.{jpg,jpeg,png,svg,gif}',
     fonts: 'src/fonts/**/*.{woff,woff2,ttf,eot,svg}'
