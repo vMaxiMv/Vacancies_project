@@ -13,7 +13,7 @@
       <header class="header">
         <h1 class="header__title">List of vacancies</h1>
         <form class="form hedaer__form">
-          <div class="form-select">
+          <div class="form__select-item">
             <label class="form__label">Form</label>
             <select name="form" class="form__select">
               <option class="form__option--disabled" disabled selected>Not selected</option>
@@ -22,7 +22,7 @@
               <option>Part time</option>
             </select>
           </div>
-          <div class="form-select">
+          <div class="form__select-item">
             <label class="form__label">Position</label>
             <select name="position" class="form__select">
               <option disabled selected>Not selected</option>
@@ -40,18 +40,30 @@
           <li class="vacancies__item">
             <article class="vacancies-card">
               <div class="vacancies-card__header">
-                <div class="vacancies-card__info">
+                <div class="vacancies-card__title-info">
                   <h3 class="vacancies-card__title">.Net Software Developer (GIS experience)</h3>
                   <img class="vacancies-card__logo" src="../img/Group.svg" alt="SoloProtect logo"/>
                 </div>
                 <button class="vacancies-card__respond">Respond</button>
               </div>
-                <ul class="vacancies-card__info">
-                  <li>Form: Full time</li>
-                  <li>Company SoloProtect</li>
-                  <li>Web https://www.soloprotect.com/uk</li>
-                  <li>Address United Kingdom</li>
-                </ul>
+              <dl class="vacancies-card__info">
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Form</dt>
+                  <dd class="vacancies-card__value">Full time</dd>
+                </div>
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Company</dt>
+                  <dd class="vacancies-card__value">SoloProtect</dd>
+                </div>
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Web</dt>
+                  <dd class="vacancies-card__value">https://www.soloprotect.com/uk</dd>
+                </div>
+                <div class="vacancies-card__item"> 
+                  <dt class="vacancies-card__label">Address</dt>
+                  <dd class="vacancies-card__value">United Kingdom</dd>
+                </div>
+              </dl>
               <p class="vacancies-card__desc">
                 We are looking for an experienced and talented Software Developer to develop, test, document, and implement solutions for SoloProtect clients and devices.
                 The ideal candidate will be self-motivated, have experience working in agile teams, and excellent communication skills
@@ -60,8 +72,8 @@
                 <summary class="vacancies-card__toggle">More details</summary>
                 <div>
                   <p class="vacancies-card__snapshot-title">Success Snapshot</p>
-                    <ul class="vacancies-card__list">
-                      <li class="vacancies-card__item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
+                    <ul class="vacancies-card__snapshot-list">
+                      <li class="vacancies-card__snapshot-item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
                       <li>Work closely with a Team Lead and a UI team to deliver stable, efficient, and scalable solutions;</li>
                       <li>Be proud of stable, reliable, and secure code.</li>
                     </ul>
@@ -73,7 +85,7 @@
           <li class="vacancies__item">
             <article class="vacancies-card">
               <div class="vacancies-card__header">
-                <div class="vacancies-card__info">
+                <div class="vacancies-card__title-info">
                   <h3 class="vacancies-card__title">A.I. Sports Startup seeks talented iOS engineer</h3>
                   <img class="vacancies-card__logo" src="../img/phantasmaLabs.svg" alt="SoloProtect logo"/>
                 </div>
@@ -93,8 +105,8 @@
                 <summary class="vacancies-card__toggle">More details</summary>
                 <div>
                   <p class="vacancies-card__snapshot-title">Success Snapshot</p>
-                    <ul class="vacancies-card__list">
-                      <li class="vacancies-card__item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
+                    <ul class="vacancies-card__snapshot-list">
+                      <li class="vacancies-card__snapshot-item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
                       <li>Work closely with a Team Lead and a UI team to deliver stable, efficient, and scalable solutions;</li>
                       <li>Be proud of stable, reliable, and secure code.</li>
                     </ul>
@@ -106,7 +118,7 @@
           <li class="vacancies__item">
             <article class="vacancies-card">
               <div class="vacancies-card__header">
-                <div class="vacancies-card__info">
+                <div class="vacancies-card__title-info">
                   <h3 class="vacancies-card__title">Senior Backend Developer</h3>
                   <img class="vacancies-card__logo" src="../img/lawpilots.svg" alt="lawpilots logo"/>
                 </div>
@@ -126,8 +138,8 @@
                 <summary class="vacancies-card__toggle">More details</summary>
                 <div>
                   <p class="vacancies-card__snapshot-title">Success Snapshot</p>
-                    <ul class="vacancies-card__list">
-                      <li class="vacancies-card__item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
+                    <ul class="vacancies-card__snapshot-list">
+                      <li class="vacancies-card__snapshot-item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
                       <li>Work closely with a Team Lead and a UI team to deliver stable, efficient, and scalable solutions;</li>
                       <li>Be proud of stable, reliable, and secure code.</li>
                     </ul>
