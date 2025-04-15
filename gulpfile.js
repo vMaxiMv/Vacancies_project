@@ -94,8 +94,7 @@ const buildFunction = () =>{
 const serverFunction = () =>
   sync.init({
     server: {
-      baseDir: ['build', 'src'],
-      index: 'VacanciesList.html'
+      baseDir: ['build', 'src']
     },
     tunnel: false,
     host: 'localhost',
