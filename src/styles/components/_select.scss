@@ -1,0 +1,28 @@
+@use '../abstracts/variables' as *;
+
+.select-block{
+    min-width: 25%; 
+    &__select-item{
+        min-width: 25%; 
+    };
+    &__select{
+        appearance: none;
+        background-color: $color-white;
+        padding: 15px 50px 15px 20px;
+        width: 100%;
+        border: 1px solid $color-border;
+        border-radius: 4px;
+        font-size: 14px;
+        position: relative;
+        background-image: url('../img/chevronDown.svg');
+        background-repeat: no-repeat;
+        background-position: right 12px center;
+        cursor: pointer;
+        &:focus {
+            outline: none;
+        };
+    };
+    &__option--disabled{
+        color: $color-text-muted;
+    };
+}

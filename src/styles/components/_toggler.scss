@@ -1,0 +1,51 @@
+@use '../abstracts/variables' as *;
+
+.toggle-list {
+    margin-top: 24px;
+    &__snapshot-title{
+        font-weight: bold;
+    }
+    &__list {
+      list-style: disc;
+      padding: 0;
+      margin-top: 8px;
+    }
+  
+    &__item {
+        margin-left: 1em;
+        line-height: 145%;
+    }
+    &__item--hidden {
+        display: none;
+    }
+    &__item--blur{
+        background: linear-gradient(to bottom, $color-text-muted 0%, rgba(120,127,133,0) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+  
+    .toggle-list__checkbox:checked ~ .toggle-list__list  .toggle-list__item{
+        display: list-item;
+        background: none;
+        -webkit-background-clip: initial;
+        -webkit-text-fill-color: initial;
+        color: black; 
+      
+    }
+  
+    &__btn {
+      display: block;
+      width: 150px;
+      margin: 30px 30% 0 70%;
+      color: $color-primary;
+      cursor: pointer;
+    }
+  
+    .toggle-list__btn::after {
+      content: "More details ▼";
+    }
+  
+    .toggle-list__checkbox:checked ~ .toggle-list__btn::after {
+      content: "Less details ▲";
+    }
+  }

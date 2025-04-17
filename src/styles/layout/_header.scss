@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+
+.header{
+    margin-top: 64px;
+
+    &__title{
+        margin-bottom: 40px;
+        font-size: 48px;
+        font-weight: 600;
+    };
+    &__option--disabled{
+        color: $color-text-muted;
+    };
+    &__form{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        align-items: flex-end;
+        margin-bottom: 48px;
+    }
+}

@@ -1,0 +1,22 @@
+@use '../abstracts/variables' as *;
+
+.contacts{
+    background-color: $color-footer-buttons;
+    font-size: 18px;
+    color:$color-white;
+    padding: 40px 0;
+    
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__column{
+        display: flex;
+        flex-direction: column;
+        gap: 8px
+    }
+    &__column--right{
+        text-align: right;
+    }
+  }
