@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src = "js/index.js"></script>
+    <title>Vacancies</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header wrapper">
+        <h1 class="header__title">List of vacancies</h1>
+        <form class="form header__form">
+          <div class="select-block">
+            <label class="form__label">Form</label>
+            <select name="form" class="select-block__select">
+              <option class="select-block__option--disabled" disabled selected>Not selected</option>
+              <option>Full time</option>
+              <option>Half time</option>
+              <option>Part time</option>
+            </select>
+          </div>
+          <div class="select-block">
+            <label class="form__label">Position</label>
+            <select name="position" class="select-block__select">
+              <option class="select-block__option--disabled" disabled selected>Not selected</option>
+              <option>Frontend</option>
+              <option>Backend</option>
+              <option>QA</option>
+            </select>
+          </div>   
+          <button class="form__search-btn" type="submit">Search</button>
+        </form>
+      </header>
+
+      <main class="vacancies">
+        <ul>
+          <li class="vacancies__item">
+            <article class="vacancies-card">
+              <div class="vacancies-card__header">
+                <div class="vacancies-card__title-info">
+                  <h3 class="vacancies-card__title">.Net Software Developer (GIS experience)</h3>
+                  <img class="vacancies-card__logo" src="../img/Group.svg" alt="SoloProtect logo"/>
+                </div>
+                <button class="vacancies-card__respond">Respond</button>
+              </div>
+              <dl class="vacancies-card__info">
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Form</dt>
+                  <dd class="vacancies-card__value">Full time</dd>
+                </div>
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Company</dt>
+                  <dd class="vacancies-card__value">SoloProtect</dd>
+                </div>
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Web</dt>
+                  <dd class="vacancies-card__value">https://www.soloprotect.com/uk</dd>
+                </div>
+                <div class="vacancies-card__item"> 
+                  <dt class="vacancies-card__label">Address</dt>
+                  <dd class="vacancies-card__value">United Kingdom</dd>
+                </div>
+              </dl>
+              <div class="vacancies-card__description-section">
+                <p class="vacancies-card__desc">
+                  We are looking for an experienced and talented Software Developer to develop, test, document, and implement solutions for SoloProtect clients and devices.
+                  The ideal candidate will be self-motivated, have experience working in agile teams, and excellent communication skills
+                </p>
+                <div class="toggle-list">
+                  <input type="checkbox" id="toggle-details-1" class="toggle-list__checkbox" hidden>
+                  <p class="toggle-list__snapshot-title">Success Snapshot</p>
+                  <ul class="toggle-list__list">
+                    <li class="toggle-list__item toggle-list__item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
+                    <li class="toggle-list__item toggle-list__item--hidden">Work closely with a Team Lead and a UI team to deliver stable, efficient, and scalable solutions;</li>
+                    <li class="toggle-list__item toggle-list__item--hidden">Be proud of stable, reliable, and secure code.</li>
+                  </ul>
+                  <label for="toggle-details-1" class="toggle-list__btn"></label>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="vacancies__item">
+            <article class="vacancies-card">
+              <div class="vacancies-card__header">
+                <div class="vacancies-card__title-info">
+                  <h3 class="vacancies-card__title">A.I. Sports Startup seeks talented iOS engineer</h3>
+                  <img class="vacancies-card__logo" src="../img/phantasmaLabs.svg" alt="SoloProtect logo"/>
+                </div>
+                <button class="vacancies-card__respond">Respond</button>
+              </div>
+              <dl class="vacancies-card__info">
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Form</dt>
+                  <dd class="vacancies-card__value">Half time</dd>
+                </div>
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Company</dt>
+                  <dd class="vacancies-card__value">Phantasma Labs</dd>
+                </div>
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Web</dt>
+                  <dd class="vacancies-card__value">https://phantasma.global/</dd>
+                </div>
+                <div class="vacancies-card__item"> 
+                  <dt class="vacancies-card__label">Address</dt>
+                  <dd class="vacancies-card__value">United Kingdom</dd>
+                </div>
+              </dl>
+              <div class="vacancies-card__description-section">
+                <p class="vacancies-card__desc">
+                  We are looking for an experienced and talented Software Developer to develop, test, document, and implement solutions for SoloProtect clients and devices.
+                  The ideal candidate will be self-motivated, have experience working in agile teams, and excellent communication skills
+                </p>
+                <div class="toggle-list">
+                  <input type="checkbox" id="toggle-details-2" class="toggle-list__checkbox" hidden>
+                  <p class="toggle-list__snapshot-title">Success Snapshot</p>
+                  <ul class="toggle-list__list">
+                    <li class="toggle-list__item toggle-list__item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
+                    <li class="toggle-list__item toggle-list__item--hidden">Work closely with a Team Lead and a UI team to deliver stable, efficient, and scalable solutions;</li>
+                    <li class="toggle-list__item toggle-list__item--hidden">Be proud of stable, reliable, and secure code.</li>
+                  </ul>
+                  <label for="toggle-details-2" class="toggle-list__btn"></label>
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="vacancies__item">
+            <article class="vacancies-card">
+              <div class="vacancies-card__header">
+                <div class="vacancies-card__title-info">
+                  <h3 class="vacancies-card__title">Senior Backend Developer</h3>
+                  <img class="vacancies-card__logo" src="../img/lawpilots.svg" alt="lawpilots logo"/>
+                </div>
+                <button class="vacancies-card__respond">Respond</button>
+              </div>
+              <dl class="vacancies-card__info">
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Form</dt>
+                  <dd class="vacancies-card__value">Part time</dd>
+                </div>
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Company</dt>
+                  <dd class="vacancies-card__value">LawPilots</dd>
+                </div>
+                <div class="vacancies-card__item">
+                  <dt class="vacancies-card__label">Web</dt>
+                  <dd class="vacancies-card__value">https://www.lawpilots.com/de-de/</dd>
+                </div>
+                <div class="vacancies-card__item"> 
+                  <dt class="vacancies-card__label">Address</dt>
+                  <dd class="vacancies-card__value">Berlin</dd>
+                </div>
+              </dl>
+              <div class="vacancies-card__description-section">
+                <p class="vacancies-card__desc">
+                  We are looking for an experienced and talented Software Developer to develop, test, document, and implement solutions for SoloProtect clients and devices.
+                  The ideal candidate will be self-motivated, have experience working in agile teams, and excellent communication skills
+                </p>
+                <div class="toggle-list">
+                  <input type="checkbox" id="toggle-details-3" class="toggle-list__checkbox" hidden>
+                  <p class="toggle-list__snapshot-title">Success Snapshot</p>
+                  <ul class="toggle-list__list">
+                    <li class="toggle-list__item toggle-list__item--blur">Develop solutions for SoloProtect product offerings using .NET languages and your experience of GIS solutions;</li>
+                    <li class="toggle-list__item toggle-list__item--hidden">Work closely with a Team Lead and a UI team to deliver stable, efficient, and scalable solutions;</li>
+                    <li class="toggle-list__item toggle-list__item--hidden">Be proud of stable, reliable, and secure code.</li>
+                  </ul>
+                  <label for="toggle-details-3" class="toggle-list__btn"></label>
+                </div>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </main>
+    </div>
+      <section class="request">
+        <div class="container">
+          <h2 class="request__title">Leave a request</h2>
+          <p class="request__subtitle">We will advise you and help you start a new project</p>
+          <form class="request__form form">
+            <div class="form__field">
+             <label class="form__label">Your name</label>
+             <input placeholder="Please introduce yourself" class="form__input" required>
+            </div>
+            <div class="form__field">
+              <label class="form__label">Email</label>
+             <input placeholder="vanov@gmail.com" type="email" class="form__input" required>
+            </div>
+            <div class="form__field">
+              <label class="form__label">Phone number</label>
+              <input placeholder="+7 (999) 000 00 00" class="form__input" required>
+            </div>
+            <div class="form__field">
+              <label class="form__label">Comment</label>
+              <textarea placeholder="Message text" class="form__textarea"></textarea>
+            </div>
+            <button class="request__submit button" type="submit">Send</button>
+            <p class="request__content">By clicking "Send" you confirm your consent to the </p>
+            <a href="#" class="request__link">processing of personal data</a>
+          </form>
+        </div>
+      </section>
+
+      <footer class="contacts">
+        <div class="container contacts__container">
+          <div class="contacts__column">
+            <span class="contacts__phone">+7 499 391-66-69</span>
+            <a class="contacts__link" href="mailto:mail@greensight.ru">mail@greensight.ru</a>
+          </div>
+          <div class="contacts__column contacts__column--right">
+            <span class="contacts__address">322A, 2nd Floor, Zelenograd, Moscow, Russia</span>
+            <a href="#" class="contacts__link">Directions</a>
+          </div>
+        </div>
+      </footer>
+  </body>
+</html>
+
