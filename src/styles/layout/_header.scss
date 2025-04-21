@@ -1,12 +1,12 @@
 @use '../abstracts/variables' as *;
 
 .header{
-    margin-top: 64px;
+    margin-top: $size-md*8;
 
     &__title{
-        margin-bottom: 40px;
+        margin-bottom: $size-md*5;
         font-size: 48px;
-        font-weight: 600;
+        font-weight: $weight-bold;
     };
     &__option--disabled{
         color: $color-text-muted;
@@ -14,8 +14,8 @@
     &__form{
         display: flex;
         flex-wrap: wrap;
-        gap: 16px;
+        gap: $size-md*2;
         align-items: flex-end;
-        margin-bottom: 48px;
+        margin-bottom: $size-md*6;
     }
 }

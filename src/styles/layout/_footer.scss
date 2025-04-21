@@ -4,7 +4,8 @@
     background-color: $color-footer-buttons;
     font-size: 18px;
     color:$color-white;
-    padding: 40px 0;
+    padding: $size-md*5 0;
+    font-weight: $weight-bold;
     
     &__container{
         display: flex;
@@ -14,9 +15,10 @@
     &__column{
         display: flex;
         flex-direction: column;
-        gap: 8px
+        gap: $size-md
     }
     &__column--right{
         text-align: right;
+        font-weight: $weight-normal;
     }
   }

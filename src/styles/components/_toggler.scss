@@ -1,14 +1,14 @@
 @use '../abstracts/variables' as *;
 
 .toggle-list {
-    margin-top: 24px;
+    margin-top: $size-md*3;
     &__snapshot-title{
-        font-weight: bold;
+        font-weight:$weight-bold
     }
     &__list {
       list-style: disc;
       padding: 0;
-      margin-top: 8px;
+      margin-top: $size-md;
     }
   
     &__item {
@@ -19,7 +19,7 @@
         display: none;
     }
     &__item--blur{
-        background: linear-gradient(to bottom, $color-text-muted 0%, rgba(120,127,133,0) 100%);
+        background: linear-gradient(to bottom, $color-text-muted 0%, $color-blur-gradient 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
@@ -35,8 +35,8 @@
   
     &__btn {
       display: block;
-      width: 150px;
-      margin: 30px 30% 0 70%;
+      width: $size-lg*9;
+      margin: $size-md*3 30% 0 70%;
       color: $color-primary;
       cursor: pointer;
     }
