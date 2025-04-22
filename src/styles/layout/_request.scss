@@ -32,4 +32,30 @@
         text-decoration-color: $color-text-decoration; 
         cursor: pointer;
     }
+
+    @include block-width(sm){
+        margin-top: 0;
+        padding-bottom: 0;
+        &__title{
+            font-size: 28px;
+            padding-top: $size-md*4;
+            margin-bottom: $size-md*2;
+        }
+        &__subtitle{
+            font-size: 16px;
+        }
+        &__form{
+            margin-top: $size-md*3;
+        }
+        &__submit{
+            width: 100%;
+            margin-top: $size-md*3;
+        }
+        &__content{
+            font-size: 14px;
+        }
+        &__link{
+            font-size: 14px;
+        }
+   }
   }

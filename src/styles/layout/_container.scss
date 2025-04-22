@@ -1,5 +1,10 @@
+@use '../abstracts/variables' as *;
+
 .container {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    @include block-width(sm){
+        padding: $size-md*4 $size-md*2 $size-md*4 $size-md*2;
+    };
 }

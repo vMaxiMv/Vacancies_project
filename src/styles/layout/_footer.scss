@@ -21,4 +21,19 @@
         text-align: right;
         font-weight: $weight-normal;
     }
+
+    @include block-width(sm){
+        font-size: 16px;
+        padding: 0;
+        &__container{
+            flex-direction: column;
+            gap: $size-md*3
+        }
+        &__column{
+            align-self: flex-start;
+        }
+        &__column--right{
+            text-align: left;
+        }
+    }
   }

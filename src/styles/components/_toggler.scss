@@ -13,6 +13,7 @@
   
     &__item {
         margin-left: 1em;
+        padding-bottom: $size-md;
         line-height: 145%;
     }
     &__item--hidden {
@@ -47,5 +48,11 @@
   
     .toggle-list__checkbox:checked ~ .toggle-list__btn::after {
       content: "Less details ▲";
+    }
+
+    @include block-width(sm){
+      &__btn {
+        margin: $size-md*2 auto;
+      }
     }
   }
