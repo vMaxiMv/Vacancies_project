@@ -1,9 +1,11 @@
+@use '../abstracts/variables' as *;
+
 button {
-    padding: 15px 45px;
+    padding: $size-lg $size-lg*3;
     border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-weight: 700;
+    border-radius: $size-sm;
+    color: $color-white;
+    font-weight: $weight-extrabold;
     font-size: 15px;
     cursor: pointer;
 }

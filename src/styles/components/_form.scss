@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as *;
+
+.form{
+    &__label {
+        display: block;
+        font-size: 12px;
+        font-weight: $weight-bold;
+    }
+    &__input,
+    &__textarea {
+        width: 50vw;
+        padding: $size-sm*3;
+        border: 1px solid $color-border;
+        border-radius: $size-sm;
+        font-size: 14px;
+
+        &::placeholder {
+            color: $color-placeholder;
+        }
+    }
+    &__textarea {
+        resize: none;
+        padding-bottom: $size-md*7;
+    }
+    &__search-btn {
+        align-self: flex-end;
+        background-color: $color-primary;
+    }
+}

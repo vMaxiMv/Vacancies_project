@@ -1,0 +1,21 @@
+@use '../abstracts/variables' as *;
+
+.header{
+    margin-top: $size-md*8;
+
+    &__title{
+        margin-bottom: $size-md*5;
+        font-size: 48px;
+        font-weight: $weight-bold;
+    };
+    &__option--disabled{
+        color: $color-text-muted;
+    };
+    &__form{
+        display: flex;
+        flex-wrap: wrap;
+        gap: $size-md*2;
+        align-items: flex-end;
+        margin-bottom: $size-md*6;
+    }
+}

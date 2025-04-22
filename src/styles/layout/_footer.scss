@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as *;
+
+.contacts{
+    background-color: $color-footer-buttons;
+    font-size: 18px;
+    color:$color-white;
+    padding: $size-md*5 0;
+    font-weight: $weight-bold;
+    
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    &__column{
+        display: flex;
+        flex-direction: column;
+        gap: $size-md
+    }
+    &__column--right{
+        text-align: right;
+        font-weight: $weight-normal;
+    }
+  }
