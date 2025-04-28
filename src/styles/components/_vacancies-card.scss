@@ -54,4 +54,42 @@
         margin-top: $size-md*4;
         line-height: 145%
     };
+
+
+    @include block-width(sm){
+        padding: $size-sm*5;
+        margin-bottom: 0;
+
+        &__header{
+            flex-direction: column;
+            justify-content: space-between;
+            gap: $size-md
+        };
+        &__title-info{
+            flex-direction: column-reverse;
+            gap: $size-sm*5;
+            margin-bottom: $size-md*3;
+        };
+        &__logo{
+            align-self: flex-start;
+            width: $size-lg*10;
+        };
+        &__title{
+            font-size: $size-sm*5;
+        };
+        &__info{
+            margin-top: $size-md*3;
+            flex-direction: column;
+            gap: $size-md*2;
+        };
+        &__label{
+            font-size: 14px
+         };
+        &__value{
+             font-size: 14px
+        };
+        &__description-section{
+            width: 100%;
+        };
+    }
 }

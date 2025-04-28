@@ -26,4 +26,18 @@
         align-self: flex-end;
         background-color: $color-primary;
     }
+
+    @include block-width(sm){
+        &__search-btn {
+            width: 100%;
+            background-color: $color-primary;
+        }
+        &__field{
+            width: 100%;
+        }
+        &__input,
+        &__textarea {
+            width: 100%;
+        }
+    }
 }

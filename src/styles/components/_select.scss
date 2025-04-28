@@ -25,4 +25,8 @@
     &__option--disabled{
         color: $color-text-muted;
     };
+
+    @include block-width(sm){
+         min-width: 100%;
+    }
 }

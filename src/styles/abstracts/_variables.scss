@@ -1,3 +1,5 @@
+@use "sass:map";
+
 $color-primary: rgba(13, 122, 217, 1);
 $color-text-muted: rgba(120, 127, 133, 1);
 $color-border: rgba(205, 210, 215, 1);
@@ -10,7 +12,6 @@ $color-blur-gradient: rgba(120,127,133,0);
 $color-white: #ffffff;
 $color-main: #131313;
 
-
 $weight-normal: 400;
 $weight-bold: 500;
 $weight-extrabold: 700;
@@ -18,3 +19,17 @@ $weight-extrabold: 700;
 $size-sm: 4px;
 $size-md: 8px;
 $size-lg: 16px;
+
+$breakpoints: (
+    'xs': 568px,
+    'sm': 768px,
+    'md': 1024px,
+    'lg': 1280px,
+    'xl': 1440px
+);
+
+@mixin block-width($breakpoint){
+    @media (max-width: map.get($breakpoints, $breakpoint)){
+        @content;
+    }
+}

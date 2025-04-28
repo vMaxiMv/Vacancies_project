@@ -18,4 +18,15 @@
         align-items: flex-end;
         margin-bottom: $size-md*6;
     }
+
+    @include block-width(sm){
+        margin-top: 0;
+        &__title{
+            margin-bottom: $size-md * 3;
+            font-size: 34px;
+        };
+        &__form{
+            width: 100%;
+        }
+    }
 }
