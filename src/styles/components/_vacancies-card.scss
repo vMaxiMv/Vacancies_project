@@ -1,5 +1,24 @@
 @use '../abstracts/variables' as *;
 
+.pagination-container{
+    padding-top: $size-md*3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: $size-md;
+    
+    &__btn{
+        color: black;
+        background-color: transparent;
+        padding: $size-sm;
+    }
+    &__btn--active{
+        padding: $size-sm;
+        background-color: $color-primary;
+    }
+}
+
+
 .vacancies-card{
     width: 100%;
     height: 100%;
@@ -24,6 +43,7 @@
     &__respond{
         background-color: $color-footer-buttons;
         align-items: center;
+      //  align-self: flex-start;
     };
     &__respond:hover{
         background-color: black;
@@ -36,6 +56,9 @@
     };
     &__logo{
         align-items: center;
+        width: $size-md*7;
+        
+
     };
     &__item{
         display: flex;
@@ -72,7 +95,7 @@
         };
         &__logo{
             align-self: flex-start;
-            width: $size-lg*10;
+            width: $size-md*8;
         };
         &__title{
             font-size: $size-sm*5;
