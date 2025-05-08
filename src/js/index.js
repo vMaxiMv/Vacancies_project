@@ -1,6 +1,6 @@
-async function getVacanciesQuery() {
+async function getVacanciesQuery(page) {
     try {
-    const response = await fetch(`https://api.hh.ru/vacancies`)
+    const response = await fetch(`https://api.hh.ru/vacancies?page=${page}`)
     const data = await response.json()
     const filteredVacancies = 
         data.items.map(item => ({
@@ -75,12 +75,29 @@ function renderVacanciesList(vacancies, container){
 }
 
 
-async function renderPage(){
+function renderPagination(currentPage, container, onPageChange){
+    container.innerHTML = ''
+    prevBtns = Math.max(0, currentPage - 5)
+    nextBtns = Math.max(currentPage, prevBtns + 10)
+    console.log('nextBtns', nextBtns)
+    for(let i = prevBtns; i < nextBtns; i++){
+        const pageNumberBtn = document.createElement('button')
+        pageNumberBtn.textContent = i + 1;
+        pageNumberBtn.className = 'pagination-container__btn' + (i === currentPage ? '--active' : '')
+        pageNumberBtn.addEventListener('click', () => onPageChange(i))
+        console.log('pageNumberBtn', i)
+        container.appendChild(pageNumberBtn)
+    }
+}
+
+async function renderPage(page = 0){
     const vacanciesList = document.querySelector('.vacancies ul')
-    const vacancies = await getVacanciesQuery()
+    const paginationContainer = document.querySelector('.pagination-container')
+    const vacancies = await getVacanciesQuery(page)
     
     if(vacancies && vacancies.length > 0){
         renderVacanciesList(vacancies, vacanciesList)
+        renderPagination(page, paginationContainer, renderPage)
     }
     else{
         vacanciesList.innerHTML = `<li>Вакансии не найдены</li>`
@@ -88,5 +105,5 @@ async function renderPage(){
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    renderPage()
+    renderPage(0)
 })
