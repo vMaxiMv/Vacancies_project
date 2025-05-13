@@ -1,22 +1,5 @@
-async function getVacanciesQuery() {
-    try {
-    const response = await fetch(`https://api.hh.ru/vacancies`)
-    const data = await response.json()
-    const filteredVacancies = 
-        data.items.map(item => ({
-            id: item.id,
-            name: item.name,
-            area: item.area.name,
-            schedule: item.employment.name,
-            employer: item.employer,
-            snippet: item.snippet.requirement
-        }))
-        return  filteredVacancies  
-    }
-    catch(err) {
-        console.log('Error', err)
-    }
-}
+import getVacanciesQuery from "./api/vacanciesQuery.js"
+
 
 function generateVacancyCard(vacancy, index) {
     const logoUrl = vacancy.employer.logo_urls && vacancy.employer.logo_urls.original
@@ -77,7 +60,10 @@ function renderVacanciesList(vacancies, container){
 
 async function renderPage(){
     const vacanciesList = document.querySelector('.vacancies ul')
-    const vacancies = await getVacanciesQuery()
+    console.log('Перед вызовом getVacanciesQuery')
+const vacancies = await getVacanciesQuery()
+console.log('После вызова', vacancies)
+
     
     if(vacancies && vacancies.length > 0){
         renderVacanciesList(vacancies, vacanciesList)
