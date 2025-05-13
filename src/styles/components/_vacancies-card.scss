@@ -36,6 +36,9 @@
     };
     &__logo{
         align-items: center;
+        width: $size-md*7;
+        
+
     };
     &__item{
         display: flex;
@@ -72,7 +75,7 @@
         };
         &__logo{
             align-self: flex-start;
-            width: $size-lg*10;
+            width: $size-md*8;
         };
         &__title{
             font-size: $size-sm*5;
