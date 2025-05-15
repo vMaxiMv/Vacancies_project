@@ -1,6 +1,6 @@
-export default async function getVacanciesQuery() {
+export default async function getVacanciesQuery(page) {
     try {
-    const response = await fetch(`https://api.hh.ru/vacancies`)
+    const response = await fetch(`https://api.hh.ru/vacancies?page=${page}`)
     const data = await response.json()
     const filteredVacancies = 
         data.items.map(item => ({
