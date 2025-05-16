@@ -59,13 +59,9 @@ function renderVacanciesList(vacancies, container){
 
 
 function renderPagination(currentPage, container, onPageChange){
-    console.log('currentPage', currentPage)
-    console.log('container', container)
     container.innerHTML = ''
     const prevBtns = Math.max(0, currentPage - 5)
     const nextBtns = Math.max(currentPage, prevBtns + 10)
-    console.log('prevBtns', prevBtns)
-    console.log('nextBtns', nextBtns)
     for(let i = prevBtns; i < nextBtns; i++){
         const pageNumberBtn = document.createElement('button')
         pageNumberBtn.textContent = i + 1;
@@ -80,7 +76,6 @@ async function renderPage(page = 0){
     const paginationContainer = document.querySelector('.pagination-container')
     const vacancies = await getVacanciesQuery(page)
 
-    
     if(vacancies && vacancies.length > 0){
         renderVacanciesList(vacancies, vacanciesList)
         renderPagination(page, paginationContainer, renderPage)
