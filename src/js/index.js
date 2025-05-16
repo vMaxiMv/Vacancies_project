@@ -58,15 +58,27 @@ function renderVacanciesList(vacancies, container){
 }
 
 
-async function renderPage(){
-    const vacanciesList = document.querySelector('.vacancies ul')
-    console.log('Перед вызовом getVacanciesQuery')
-const vacancies = await getVacanciesQuery()
-console.log('После вызова', vacancies)
+function renderPagination(currentPage, container, onPageChange){
+    container.innerHTML = ''
+    const prevBtns = Math.max(0, currentPage - 5)
+    const nextBtns = Math.max(currentPage, prevBtns + 10)
+    for(let i = prevBtns; i < nextBtns; i++){
+        const pageNumberBtn = document.createElement('button')
+        pageNumberBtn.textContent = i + 1;
+        pageNumberBtn.className = 'pagination-container__btn' + (i === currentPage ? '--active' : '')
+        pageNumberBtn.addEventListener('click', () => onPageChange(i))
+        container.appendChild(pageNumberBtn)
+    }
+}
 
-    
+async function renderPage(page = 0){
+    const vacanciesList = document.querySelector('.vacancies ul')
+    const paginationContainer = document.querySelector('.pagination-container')
+    const vacancies = await getVacanciesQuery(page)
+
     if(vacancies && vacancies.length > 0){
         renderVacanciesList(vacancies, vacanciesList)
+        renderPagination(page, paginationContainer, renderPage)
     }
     else{
         vacanciesList.innerHTML = `<li>Вакансии не найдены</li>`
@@ -74,5 +86,5 @@ console.log('После вызова', vacancies)
 }
 
 window.addEventListener('DOMContentLoaded', () => {
-    renderPage()
+    renderPage(0)
 })
