@@ -5,6 +5,9 @@ const autoprefixer = require('gulp-autoprefixer').default;
 const sass = require('gulp-sass')(require('sass'));
 const sync = require('browser-sync').create()
 const {deleteAsync} = require('del')
+const ts = require('gulp-typescript')
+
+const tsProject = ts.createProject('tsconfig.json');
 
 const path = {
   build: {
@@ -18,6 +21,7 @@ const path = {
     html: 'src/*.*',
     css: 'src/styles/*.scss',
     js: 'src/js/**/*.js',
+    ts: 'src/js/**/*.ts',
     img: 'src/img/**/*.{jpg,jpeg,png,svg,gif}',
     fonts: 'src/fonts/**/*.{woff,woff2,ttf,eot,svg}'
   },
@@ -25,6 +29,7 @@ const path = {
     html: 'src/*.*',
     css: 'src/styles/**/*.scss',
     js: 'src/js/**/*.js',
+    ts: 'src/js/**/*.ts',
     img: 'src/img/**/*.{jpg,jpeg,png,svg,gif}',
     fonts: 'src/fonts/**/*.{woff,woff2,ttf,eot,svg}'
   },
@@ -73,6 +78,19 @@ const buildJs = () =>{
     .pipe(sync.stream());
   }
 
+  const buildTS = () => {
+    return gulp
+      .src(path.src.ts)
+      .on('error', function (e) {
+        gutil.log(e.plugin, gutil.colors.red(e.message));
+      })
+      .pipe(sourcemaps.init())
+      .pipe(tsProject())
+      .pipe(sourcemaps.write('.'))
+      .pipe(gulp.dest(path.build.js))
+      .pipe(sync.stream());
+  };
+
 const buildImg = () => {
  return gulp
     .src(path.src.img)
@@ -89,7 +107,7 @@ const buildFonts = () => {
 
 
 const buildFunction = () =>{
- return gulp.series(clean, buildHtml, buildJs,buildCSS, buildImg, buildFonts);
+ return gulp.series(clean, buildHtml, buildJs,buildTS, buildCSS, buildImg, buildFonts);
 }
 const serverFunction = () =>
   sync.init({
@@ -105,6 +123,7 @@ const watchFunction = () => {
   gulp.watch([path.watch.html], gulp.series(buildHtml));
   gulp.watch([path.watch.css], gulp.series(buildCSS));
   gulp.watch([path.watch.js], gulp.series(buildJs));
+  gulp.watch([path.watch.ts], gulp.series(buildTS));
   gulp.watch([path.watch.img], gulp.series(buildImg));
 };
 
