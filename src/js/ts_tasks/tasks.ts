@@ -1,71 +1,71 @@
 // Задание 1
 // Создать тип "Person" с полями "имя" (string), "возраст" (number) и "пол" (enum).
 // Затем создать интерфейс "User", который должен включать тип "Person" и также содержать поле "email" (string) и "пароль" (string).
-enum Пол {
-    муж = "Мужской",
-    жен = "Женский"
+enum GenderEnum {
+    male = "Мужской",
+    female = "Женский"
 };
 
-type Person = {
-     имя: string,
-     возраст: number,
-     пол: Пол
+type PersonType = {
+     name: string,
+     age: number,
+     gender: GenderEnum
 }
-interface User {
-    person: Person,
+interface IUser extends PersonType{
     email: string,
-    пароль: string
+    password: string
 }
+
 
 // Задание 2
 // Создать тип "Animal" с общими полями для животных: "имя" (string), "возраст" (number) и "тип" (enum).
 // Затем на основе этого типа создать интерфейсы для конкретных животных: "Кошка", "Собака" и "Птица",
 // каждая из которых должна содержать дополнительные поля, свойственные именно этому виду животных.
 
-enum Тип {
-    кошка = "Кошка",
-    собака = "Собака",
-    птица = "Птица" 
+enum AnimalTypeEnum {
+    cat = "Кошка",
+    dog = "Собака",
+    bird = "Птица" 
 }
 
-type Animal = {
-    имя: string,
-    возраст: number,
-    тип: Тип
+type AnimalType = {
+    name: string,
+    age: number,
+    animalType: AnimalTypeEnum
 }
-interface Кошка extends Animal{
-   домашняя: boolean
+interface ICat extends AnimalType{
+   domestic: boolean
 }
 
-interface Собака extends Animal{
-    охотничья: boolean
+interface IDog extends AnimalType{
+    hunting: boolean
  }
 
- interface Птица extends Animal{
-    умеетЛетать: boolean
+ interface IBird extends AnimalType{
+    canFly: boolean
  }
 
  // Задание 3
  // Создать тип "Task" с полями "название" (string), "описание" (string), "статус" (enum) и "дата создания" (Date).
  // Затем создать тип "TaskList", который должен содержать массив объектов типа "Task" и методы для добавления, удаления и изменения задач.
 
-enum Статус {
+enum StatusEnum {
     В_работе,
     Ревью,
     Завершена
 }
 
- type Task = {
-    название: string,
-    описание: string,
-    статус: Статус,
-    дата_создания: Date
+ type TaskType = {
+    name: string,
+    description: string,
+    status: StatusEnum,
+    endDate: Date
 }
-type TaskList = {
-    tasks: Task[],
-    addTasks: (task:Task)=>void,
-    deleteTasks: (task:Task)=>void,
-    changeTasks: (task:Task)=>void,
+type TaskListType = {
+    tasks: TaskType[],
+    addTasks: (task:TaskType)=>void,
+    deleteTasks: (task:TaskType)=>void,
+    changeTasks: (task:TaskType)=>void,
 }
 
 // Задание 4
@@ -74,14 +74,14 @@ type TaskList = {
 
 
 function groupBy <T, K extends keyof T>(arr: T[], key: K): Record<string, T[]> {
-    return arr.reduce((acc, cur) => {
+    return arr.reduce((acc: Record<string, T[]>, cur) => {
       const groupKey = String(cur[key]);
       if (!acc[groupKey]) {
         acc[groupKey] = [];
       }
       acc[groupKey].push(cur);
       return acc;
-    }, {} as Record<string, T[]>);
+    }, {});
   }
   const objects = [
     { id: 1, name: 'Alice', age: 25 },
