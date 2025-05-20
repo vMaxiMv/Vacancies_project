@@ -50,9 +50,9 @@ interface IDog extends AnimalType{
  // Затем создать тип "TaskList", который должен содержать массив объектов типа "Task" и методы для добавления, удаления и изменения задач.
 
 enum StatusEnum {
-    В_работе,
-    Ревью,
-    Завершена
+    in_progress = 'В_работе',
+    review = 'Ревью',
+    finished = 'Завершена' 
 }
 
  type TaskType = {
